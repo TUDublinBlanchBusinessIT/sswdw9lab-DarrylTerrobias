@@ -1,3 +1,4 @@
+
 <?php
 date_default_timezone_set('America/New_York');
 
@@ -12,6 +13,7 @@ echo "<br>Total points: " . $myTeam->getPoints();
 
 $myTeam->finalScore(3,2);
 echo "<br>Total points: " . $myTeam->getPoints(); 
+echo "<br>Total Average: " . $myTeam->getGoalAverage(); 
 
 
 

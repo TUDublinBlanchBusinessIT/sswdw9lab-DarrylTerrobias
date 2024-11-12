@@ -6,27 +6,30 @@ class Team
     private $totalGames=0;
     Private $totalPoints=0;
 
+    
+    // This is the FUNCTION 
     public function __construct($parm1)
     {
         $this->name = $parm1;
     }
-
-    public function finalScore($ht, $at)
+    // This is the FUNCTION 
+    public function finalScore($hts, $ats)
     {
+        // This is the ATTRIBUTES
         $this->totalGames += 1;
         
-        if ($ht > $at) {
+        if ($hts > $ats) {
             $this->totalPoints += 3;
         }
    
-        elseif ($ht < $at) {
+        elseif ($hts < $ats) {
             $this->totalPoints += 0;
 
         }
         else {
             $this->totalPoints += 1;
         }
-        $this->totalGoals += $ht;
+        $this->totalGoals += $hts;
     }
 
     public function getPoints()
@@ -37,6 +40,8 @@ class Team
     public function getGoalAverage()
     {
         return $this->totalGoals/$this->totalGames;
+
+    public function finalScore()
     }
 }
 ?>
